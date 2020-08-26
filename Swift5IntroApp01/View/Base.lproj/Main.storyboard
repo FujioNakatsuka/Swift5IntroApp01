@@ -22,7 +22,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="Cyf-dN-HJW"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjN-SD-4fG">
-                                <rect key="frame" x="150" y="416" width="113" height="64"/>
+                                <rect key="frame" x="164" y="428" width="86" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="スキップ">
