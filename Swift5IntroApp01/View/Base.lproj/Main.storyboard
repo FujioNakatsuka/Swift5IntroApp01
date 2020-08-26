@@ -21,15 +21,15 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="L4h-Lv-q1M"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Cyf-dN-HJW"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjN-SD-4fG">
-                                <rect key="frame" x="164" y="428" width="86" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-MX-vFl">
+                                <rect key="frame" x="312" y="75" width="63" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="スキップ">
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IJ6-2D-eAQ" kind="show" id="pgv-35-0d4"/>
+                                    <segue destination="IJ6-2D-eAQ" kind="show" id="NwC-Wl-xHm"/>
                                 </connections>
                             </button>
                         </subviews>
