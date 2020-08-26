@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2B66DFF6998CC194CB6C10 /* Pods_Swift5IntroApp01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7829E412DDED7AAEDF2D3184 /* Pods_Swift5IntroApp01.framework */; };
 		8D353C7124F63387009AA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D353C7024F63387009AA871 /* AppDelegate.swift */; };
 		8D353C7324F63387009AA871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D353C7224F63387009AA871 /* SceneDelegate.swift */; };
 		8D353C7524F63387009AA871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D353C7424F63387009AA871 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7829E412DDED7AAEDF2D3184 /* Pods_Swift5IntroApp01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5IntroApp01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8128E0606322494CDEC2CB3E /* Pods-Swift5IntroApp01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5IntroApp01.release.xcconfig"; path = "Target Support Files/Pods-Swift5IntroApp01/Pods-Swift5IntroApp01.release.xcconfig"; sourceTree = "<group>"; };
 		8D353C6D24F63387009AA871 /* Swift5IntroApp01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5IntroApp01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D353C7024F63387009AA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D353C7224F63387009AA871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8D353C7924F63389009AA871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D353C7C24F63389009AA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D353C7E24F63389009AA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918D363002C40B0BD9143126 /* Pods-Swift5IntroApp01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5IntroApp01.debug.xcconfig"; path = "Target Support Files/Pods-Swift5IntroApp01/Pods-Swift5IntroApp01.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2B66DFF6998CC194CB6C10 /* Pods_Swift5IntroApp01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7535CC829D7EA02DA8E013F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				918D363002C40B0BD9143126 /* Pods-Swift5IntroApp01.debug.xcconfig */,
+				8128E0606322494CDEC2CB3E /* Pods-Swift5IntroApp01.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D353C6424F63387009AA871 = {
 			isa = PBXGroup;
 			children = (
 				8D353C6F24F63387009AA871 /* Swift5IntroApp01 */,
 				8D353C6E24F63387009AA871 /* Products */,
+				7535CC829D7EA02DA8E013F4 /* Pods */,
+				A5F2C39212C4064BE275CF5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = Swift5IntroApp01;
 			sourceTree = "<group>";
 		};
+		A5F2C39212C4064BE275CF5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7829E412DDED7AAEDF2D3184 /* Pods_Swift5IntroApp01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D353C8124F63389009AA871 /* Build configuration list for PBXNativeTarget "Swift5IntroApp01" */;
 			buildPhases = (
+				ABA9C67BCDE2E7C343DA2EFE /* [CP] Check Pods Manifest.lock */,
 				8D353C6924F63387009AA871 /* Sources */,
 				8D353C6A24F63387009AA871 /* Frameworks */,
 				8D353C6B24F63387009AA871 /* Resources */,
+				F6B058877C83630732AFA28B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABA9C67BCDE2E7C343DA2EFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift5IntroApp01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B058877C83630732AFA28B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5IntroApp01/Pods-Swift5IntroApp01-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5IntroApp01/Pods-Swift5IntroApp01-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift5IntroApp01/Pods-Swift5IntroApp01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D353C6924F63387009AA871 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8D353C8224F63389009AA871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 918D363002C40B0BD9143126 /* Pods-Swift5IntroApp01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		8D353C8324F63389009AA871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8128E0606322494CDEC2CB3E /* Pods-Swift5IntroApp01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
