@@ -27,7 +27,7 @@ class introViewController: UIViewController,UIScrollViewDelegate {
             let animationView = AnimationView()
             
             //viewのsizeの分だけ、右へいく
-            let animation = Animation.named(onboardStringArray[i])
+            let animation = Animation.named(onboardArray[i])
             animationView.frame = CGRect(x: CGFloat(i) * view.frame.size.width, y: 0, width: view.frame.size.width, height: view.frame.size.height)
             animationView.animation = animation
             animationView.contentMode = .scaleAspectFit
