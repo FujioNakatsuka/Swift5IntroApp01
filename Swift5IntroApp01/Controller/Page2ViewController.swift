@@ -33,7 +33,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         self.tableView.backgroundView = imageView
       
         //XMLパース
-        let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+        let urlString = "https://www.mhlw.go.jp/stf/news.rdf"
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
@@ -45,7 +45,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         return tableView
         
     }
-    // MARK: - Table view data source
+    // UITableViewが持っているメソッドを使うときは、全てoverrideが付いて上書きをする⭐️
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -59,7 +59,6 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.size.height/5
     }
-    
     
     
     
@@ -79,6 +78,9 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.detailTextLabel?.text = newsItem.url
         cell.detailTextLabel?.textColor = .white
         
+        //⭐️dc:dateが拾えないので日時表示はできない
+        cell.detailTextLabel?.text = newsItem.date
+        cell.detailTextLabel?.textColor = .white
         
         return cell
     }
@@ -131,11 +133,14 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
           
         }
+      
+    
+    }
         // 呼ばれて一旦空にする⭐️
         func parser(_ parser:XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?){
             
             self.currentElementName = nil
-            
+        }
             //どういう瞬間に必要か？⭐️
             func parserDidEndDocument(_ parser: XMLParser){
                 
@@ -143,7 +148,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
 
                 //⭐️overrideで'override' can only be specified on class membersと警告⭐️
-            func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
+             override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
                     
                   let webViewController = WebViewController()
                 webViewController.modalTransitionStyle = .crossDissolve
@@ -155,12 +160,12 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
                    
                        
                 
-            }
             
-        }
+            
+}
     
     
-    }
+    
 
 
     

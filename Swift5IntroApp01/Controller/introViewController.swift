@@ -14,7 +14,7 @@ class introViewController: UIViewController,UIScrollViewDelegate {
     
     var onboardArray = ["1","2","3","4","5"]
     
-    var onboardStringArray = ["We are the world! ","We are the friends!","We a the children!","We are the human!","We are the citizen!"]
+    var onboardStringArray = ["We are the world! ","We are the friends!","We are the children!","We are the human!","We are the citizens of the esrth!"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

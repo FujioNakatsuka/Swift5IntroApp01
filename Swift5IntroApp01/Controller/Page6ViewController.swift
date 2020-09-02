@@ -32,7 +32,7 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
         self.tableView.backgroundView = imageView
         
         //XMLパース
-        let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+        let urlString = "https://www.wam.go.jp/gyoseiShiryou/new_rss"
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
@@ -76,6 +76,10 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.textLabel?.numberOfLines = 3
         
         cell.detailTextLabel?.text = newsItem.url
+        cell.detailTextLabel?.textColor = .white
+        
+        //⭐️日付のタグはdc:dateなので、日付表示されない、リンク先の本文にはアクセスできない。
+        cell.detailTextLabel?.text = newsItem.pubDate
         cell.detailTextLabel?.textColor = .white
         
         
@@ -130,11 +134,14 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
           
         }
+        
+        
+    }
         // 呼ばれて一旦空にする⭐️
         func parser(_ parser:XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?){
             
             self.currentElementName = nil
-            
+        }
             //どういう瞬間に必要か？⭐️
             func parserDidEndDocument(_ parser: XMLParser){
                 
@@ -142,7 +149,7 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
 
                 //⭐️overrideで'override' can only be specified on class membersと警告⭐️
-            func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
+            override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
                     
                   let webViewController = WebViewController()
                 webViewController.modalTransitionStyle = .crossDissolve
@@ -153,11 +160,7 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
                    
                        
-                
-            }
-            
-        }
-    
+ 
     
     }
 

@@ -13,4 +13,7 @@ class NewsItems{
     var title:String?
     var url:String?
     var pubDate:String?
+   
+    //page2（厚生労働省）はdc:date
+    var date:String?
 }

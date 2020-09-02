@@ -33,7 +33,7 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
         self.tableView.backgroundView = imageView
         
         //XMLパース
-        let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+        let urlString = "https://www.ndl.go.jp/jp/data/sakuin/rss/000000097643.xml"
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
@@ -64,7 +64,6 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
     
     
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         cell.backgroundColor = .clear
@@ -77,6 +76,10 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.textLabel?.numberOfLines = 3
         
         cell.detailTextLabel?.text = newsItem.url
+        cell.detailTextLabel?.textColor = .white
+        
+        //⭐️タグ＜pubDate＞が採用されている、発刊日なので午前7時に統一で処理される、最新号のみ、リンク先本文にアクセス不可
+        cell.detailTextLabel?.text = newsItem.pubDate
         cell.detailTextLabel?.textColor = .white
         
         
@@ -100,10 +103,9 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
             
             
         }
-            
-
     
-    }
+    
+}
    
     //判定メソッド
     func parser(_ parser: XMLParser, foundCharacters string: String) {
@@ -129,13 +131,16 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
             default:break
                 
             }
-          
+       
         }
-        // 呼ばれて一旦空にする⭐️
+ 
+    }
+    
+    // 呼ばれて一旦空にする⭐️
         func parser(_ parser:XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?){
             
             self.currentElementName = nil
-            
+    }
             //どういう瞬間に必要か？⭐️
             func parserDidEndDocument(_ parser: XMLParser){
                 
@@ -143,7 +148,7 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
 
                 //⭐️overrideで'override' can only be specified on class membersと警告⭐️
-            func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
+            override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
                     
                   let webViewController = WebViewController()
                 webViewController.modalTransitionStyle = .crossDissolve
@@ -155,12 +160,11 @@ class Page4ViewController: UITableViewController,SegementSlideContentScrollViewD
                    
                        
                 
-            }
+ }
             
-        }
+        
     
     
-    }
 
 
     

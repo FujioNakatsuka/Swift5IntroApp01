@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  Swift5IntroApp01
 //
 //  Created by 中塚富士雄 on 2020/08/27.
@@ -42,7 +42,7 @@
         
         override var titlesInSwitcher: [String]{
             
-            return["Top","AbemaNews","Yahoo!","IT","Buzz","CNN"]
+            return["Yahoo!","厚生労働省","東京都","訪問看護と介護","小金井市","福祉医療機構"]
             
         }
         

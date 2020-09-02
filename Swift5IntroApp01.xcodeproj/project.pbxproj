@@ -19,7 +19,7 @@
 		8DC9E50A24F725E900D666A2 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DC9E50524F725E900D666A2 /* 4.json */; };
 		8DC9E50C24F741B000D666A2 /* LoginMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9E50B24F741B000D666A2 /* LoginMovieViewController.swift */; };
 		8DD65DA624F7530E00AD5787 /* start.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8DD65DA524F7530E00AD5787 /* start.mov */; };
-		8DD65DAA24F75F2B00AD5787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD65DA924F75F2B00AD5787 /* ViewController.swift */; };
+		8DD65DAA24F75F2B00AD5787 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD65DA924F75F2B00AD5787 /* BaseViewController.swift */; };
 		8DD65DAC24F760E700AD5787 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD65DAB24F760E700AD5787 /* Page1ViewController.swift */; };
 		8DD65DAE24F76D6400AD5787 /* NewsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD65DAD24F76D6400AD5787 /* NewsItems.swift */; };
 		8DD65DB024F779FA00AD5787 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD65DAF24F779FA00AD5787 /* WebViewController.swift */; };
@@ -48,7 +48,7 @@
 		8DC9E50524F725E900D666A2 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
 		8DC9E50B24F741B000D666A2 /* LoginMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMovieViewController.swift; sourceTree = "<group>"; };
 		8DD65DA524F7530E00AD5787 /* start.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = start.mov; sourceTree = "<group>"; };
-		8DD65DA924F75F2B00AD5787 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DD65DA924F75F2B00AD5787 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8DD65DAB24F760E700AD5787 /* Page1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		8DD65DAD24F76D6400AD5787 /* NewsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItems.swift; sourceTree = "<group>"; };
 		8DD65DAF24F779FA00AD5787 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				8D353C7224F63387009AA871 /* SceneDelegate.swift */,
 				8D353C9324F6390D009AA871 /* introViewController.swift */,
 				8DC9E50B24F741B000D666A2 /* LoginMovieViewController.swift */,
-				8DD65DA924F75F2B00AD5787 /* ViewController.swift */,
+				8DD65DA924F75F2B00AD5787 /* BaseViewController.swift */,
 				8DD65DAB24F760E700AD5787 /* Page1ViewController.swift */,
 				8DD65DAF24F779FA00AD5787 /* WebViewController.swift */,
 				8DD65DB124F77E2800AD5787 /* Page2ViewController.swift */,
@@ -284,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD65DAA24F75F2B00AD5787 /* ViewController.swift in Sources */,
+				8DD65DAA24F75F2B00AD5787 /* BaseViewController.swift in Sources */,
 				8DD65DAE24F76D6400AD5787 /* NewsItems.swift in Sources */,
 				8D353C7124F63387009AA871 /* AppDelegate.swift in Sources */,
 				8DD65DB424F77ED000AD5787 /* Page3ViewController.swift in Sources */,

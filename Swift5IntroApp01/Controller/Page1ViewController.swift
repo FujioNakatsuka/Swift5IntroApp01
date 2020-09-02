@@ -63,8 +63,7 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
     
     
     
-    
-    
+    //日付は表示できるか？
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         cell.backgroundColor = .clear
@@ -77,6 +76,10 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.textLabel?.numberOfLines = 3
         
         cell.detailTextLabel?.text = newsItem.url
+        cell.detailTextLabel?.textColor = .white
+        
+        //⭐️日時が表示されてurlは表示されなくなる
+        cell.detailTextLabel?.text = newsItem.pubDate
         cell.detailTextLabel?.textColor = .white
         
         
@@ -112,7 +115,7 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
             //配列の中身は1→5だが、順番は0→4番目なので1を入れると1番目の2になってしまう
             let lastItem = self.newsItems[self.newsItems.count - 1]
             
-            
+        
             switch self.currentElementName {
             
             
@@ -131,11 +134,13 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
           
         }
+    
+    }
         // 呼ばれて一旦空にする⭐️
         func parser(_ parser:XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?){
             
             self.currentElementName = nil
-            
+        }
             //どういう瞬間に必要か？⭐️
             func parserDidEndDocument(_ parser: XMLParser){
                 
@@ -143,7 +148,7 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
 
                 //⭐️overrideで'override' can only be specified on class membersと警告⭐️
-            func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
+            override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
                     
                   let webViewController = WebViewController()
                 webViewController.modalTransitionStyle = .crossDissolve
@@ -151,16 +156,10 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
                 UserDefaults.standard.set(newsItem.url, forKey: "url")
                 present(webViewController,animated: true, completion: nil)
                     
-            }
-                   
-                       
-                
-            }
-            
-        }
-    
-    
     }
+ 
+    
+}
 
 
     

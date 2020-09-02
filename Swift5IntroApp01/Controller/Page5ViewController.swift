@@ -32,7 +32,7 @@ class Page5ViewController: UITableViewController,SegementSlideContentScrollViewD
         self.tableView.backgroundView = imageView
         
         //XMLパース
-        let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+        let urlString = "https://www.city.koganei.lg.jp/rss_news.xml"
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
@@ -78,6 +78,10 @@ class Page5ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.detailTextLabel?.text = newsItem.url
         cell.detailTextLabel?.textColor = .white
         
+        //⭐️日時表示OK、期間は2週間、リンク先の本文にはアクセスできない
+        cell.detailTextLabel?.text = newsItem.pubDate
+        cell.detailTextLabel?.textColor = .white
+     
         
         return cell
     }
@@ -130,11 +134,14 @@ class Page5ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
           
         }
+        
+    }
         // 呼ばれて一旦空にする⭐️
         func parser(_ parser:XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?){
             
             self.currentElementName = nil
             
+        }
             //どういう瞬間に必要か？⭐️
             func parserDidEndDocument(_ parser: XMLParser){
                 
@@ -142,7 +149,7 @@ class Page5ViewController: UITableViewController,SegementSlideContentScrollViewD
             }
 
                 //⭐️overrideで'override' can only be specified on class membersと警告⭐️
-            func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
+            override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath){
                     
                   let webViewController = WebViewController()
                 webViewController.modalTransitionStyle = .crossDissolve
@@ -152,11 +159,7 @@ class Page5ViewController: UITableViewController,SegementSlideContentScrollViewD
                     
             }
                    
-                       
-                
-            }
-            
-        }
+ 
     
     
     }
