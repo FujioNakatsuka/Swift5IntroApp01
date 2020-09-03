@@ -126,7 +126,7 @@ class Page6ViewController: UITableViewController,SegementSlideContentScrollViewD
             case "link":
                 lastItem.url = string
                 
-            case "pubDate":
+            case "dc:date":
                 lastItem.pubDate = string
                 
             default:break

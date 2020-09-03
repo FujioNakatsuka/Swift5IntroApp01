@@ -37,7 +37,9 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         let url:URL = URL(string:urlString)!
         parser = XMLParser(contentsOf: url)!
         parser.delegate = self
+        print(parser.debugDescription)
         parser.parse()
+        
         
     }
     @objc var scrollView: UIScrollView{
@@ -79,7 +81,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.detailTextLabel?.textColor = .white
         
         //⭐️dc:dateが拾えないので日時表示はできない
-        cell.detailTextLabel?.text = newsItem.date
+        cell.detailTextLabel?.text = newsItem.pubDate
         cell.detailTextLabel?.textColor = .white
         
         return cell
@@ -125,7 +127,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
             case "link":
                 lastItem.url = string
                 
-            case "pubDate":
+            case "dc:date":
                 lastItem.pubDate = string
                 
             default:break

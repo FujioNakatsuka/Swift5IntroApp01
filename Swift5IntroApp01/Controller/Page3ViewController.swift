@@ -69,6 +69,7 @@ class Page3ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.backgroundColor = .clear
         
         let newsItem = self.newsItems[indexPath.row]
+        print(newsItem.title)
         
         cell.textLabel?.text = newsItem.title
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
@@ -79,8 +80,8 @@ class Page3ViewController: UITableViewController,SegementSlideContentScrollViewD
         cell.detailTextLabel?.textColor = .white
       
 //⭐️この行が入ると、東京都を表示させた所で画面フリーズが発生
-//        cell.detailTextLabel?.text = newsItem.pubDate
-//        cell.detailTextLabel?.textColor = .white
+        cell.detailTextLabel?.text = newsItem.pubDate
+        cell.detailTextLabel?.textColor = .white
         
         return cell
     }
